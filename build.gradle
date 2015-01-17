@@ -1,23 +1,18 @@
-apply plugin: 'idea'
+apply plugin: 'eclipse'
 apply plugin: 'java'
 apply plugin: 'application'
 
 mainClassName = 'hello.HelloWorld'
 
-sourceCompatibility = 1.7
-targetCompatibility = 1.7
-
-def artifactoryHost = hasProperty('artifactoryHost') ? artifactoryHost : '172.16.71.38'
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
 
 repositories {
-    #maven { 
-    #		url "http://${artifactoryHost}/artifactory/repo" 
-    #	}
     mavenCentral()
 }
 
 wrapper {
-    gradleVersion '1.12'
+    gradleVersion '2.2.1'
 }
 
 dependencies {
