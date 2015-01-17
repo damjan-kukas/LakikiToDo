@@ -10,7 +10,10 @@ targetCompatibility = 1.7
 def artifactoryHost = hasProperty('artifactoryHost') ? artifactoryHost : '172.16.71.38'
 
 repositories {
-    maven { url "http://${artifactoryHost}/artifactory/repo" }
+    #maven { 
+    #		url "http://${artifactoryHost}/artifactory/repo" 
+    #	}
+    mavenCentral()
 }
 
 wrapper {
