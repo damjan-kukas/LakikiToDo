@@ -1,0 +1,24 @@
+apply plugin: 'idea'
+apply plugin: 'java'
+apply plugin: 'application'
+
+mainClassName = 'hello.HelloWorld'
+
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+
+def artifactoryHost = hasProperty('artifactoryHost') ? artifactoryHost : '172.16.71.38'
+
+repositories {
+    maven { url "http://${artifactoryHost}/artifactory/repo" }
+}
+
+wrapper {
+    gradleVersion '1.12'
+}
+
+dependencies {
+    compile "joda-time:joda-time:2.2"
+}
+
+
