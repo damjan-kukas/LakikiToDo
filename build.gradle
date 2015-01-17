@@ -1,8 +1,7 @@
 apply plugin: 'eclipse'
 apply plugin: 'java'
-apply plugin: 'application'
-
-mainClassName = 'hello.HelloWorld'
+apply plugin: 'war'
+apply plugin: 'jetty'
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
@@ -16,7 +15,8 @@ wrapper {
 }
 
 dependencies {
-    compile "joda-time:joda-time:2.2"
+    providedCompile 'javax.servlet:servlet-api:2.5'
+  	runtime 'javax.servlet:jstl:1.1.2'
 }
 
 
