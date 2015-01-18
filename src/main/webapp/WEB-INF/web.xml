@@ -6,7 +6,7 @@ xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns
   <servlet>
     <display-name>HelloWorldServlet</display-name>
     <servlet-name>HelloWorldServlet</servlet-name>
-    <servlet-class>core.HelloWorldServlet</servlet-class>
+    <servlet-class>hr.lakiki.core.HelloWorldServlet</servlet-class>
   </servlet>
 
   <servlet-mapping>
